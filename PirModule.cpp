@@ -1,16 +1,15 @@
 #include "PirModule.h"
 #include <Arduino.h>
 
-
 PirModule::PirModule(int  pin) {
-  pinMode(pin, INPUT_PULLDOWN_16); 
+  pinMode(pin, INPUT); 
   this->pinData=pin;
 }
 
 void PirModule::init() {
-    Serial.println("Iniciando sensor PIR........");
+   Serial.println("Iniciando sensor PIR........");
   // demora para estabilizar el sensor
-  delay(30000);      
+  delay(25000);      
   Serial.println("Sensor OK");
 }
 
